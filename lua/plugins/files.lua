@@ -10,6 +10,7 @@ return {
 				enable = true,
 			},
 		})
+
 		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle()<cr>", { silent = true, desc = "Open file explorer" })
 	end,
 }

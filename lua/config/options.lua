@@ -19,3 +19,5 @@ vim.opt.mouse = "a"
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.clipboard = "unnamedplus"
+
+vim.diagnostic.config({ virtual_lines = { current_line = true } })

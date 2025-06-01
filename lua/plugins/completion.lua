@@ -43,6 +43,7 @@ return {
 				{ name = "luasnip" },
 				{ name = "buffer" },
 				{ name = "path" },
+				{ name = "codeium" },
 			}),
 
 			window = {
@@ -60,51 +61,12 @@ return {
 
 			formatting = {
 				format = lspkind.cmp_format({
+					mode = "symbol",
 					maxwidth = 50,
 					ellipsis_char = "...",
+					symbol_map = { Codeium = "" },
 				}),
 			},
 		})
 	end,
 }
-
--- return {
--- 	"saghen/blink.cmp",
--- 	dependencies = {
--- 		"rafamadriz/friendly-snippets",
--- 		"L3MON4D3/LuaSnip",
--- 	},
--- 	config = function()
--- 		require("blink-cmp").setup({
--- 			completion = {
--- 				ghost_text = { enabled = true },
--- 				menu = {
--- 					enabled = true,
--- 					min_width = 20,
--- 					max_height = 30,
--- 					border = "rounded", -- Options: 'none', 'single', 'double', 'rounded', 'padded'
--- 					winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection",
--- 				},
--- 				documentation = {
--- 					window = {
--- 						min_width = 20,
--- 						max_width = 60,
--- 						max_height = 15,
--- 						border = "rounded",
--- 						winblend = 10,
--- 						winhighlight = "Normal:BlinkCmpDoc,FloatBorder:BlinkCmpDocBorder",
--- 						scrollbar = true,
--- 					},
--- 				},
--- 			},
--- 			keymap = {
--- 				["<C-space>"] = { "show" },
--- 				["<C-j>"] = { "select_next" },
--- 				["<C-k>"] = { "select_prev" },
--- 				["<C-l>"] = { "show_documentation" },
--- 				["<C-h>"] = { "hide_documentation" },
--- 				["<cr>"] = { "select_and_accept", "fallback" },
--- 			},
--- 		})
--- 	end,
--- }

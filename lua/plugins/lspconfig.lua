@@ -35,10 +35,10 @@ return {
 				vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", opts)
 
 				opts.desc = "Go to previous diagnostic"
-				vim.keymap.set("n", "pd", vim.diagnostic.goto_prev, opts)
+				vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
 
 				opts.desc = "Go to next diagnostic"
-				vim.keymap.set("n", "nd", vim.diagnostic.goto_next, opts)
+				vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
 				opts.desc = "Smart rename"
 				vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
